@@ -45,6 +45,11 @@ INSTALLED_APPS = [
     'corsheaders'
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    "http://sentry-test-app.s3-website-us-east-1.amazonaws.com",
+    # Add other allowed origins as needed
+]
+
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',

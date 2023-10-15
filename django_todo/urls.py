@@ -1,5 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
+from . import views
 
 
 def trigger_error(request):
@@ -7,6 +8,7 @@ def trigger_error(request):
 
 
 urlpatterns = [
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('api/', include('todoapp.urls')),
     path('sentry-debug/', trigger_error),
